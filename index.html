@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/2048px-Heart_coraz%C3%B3n.svg.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media-querys.css" />
+    <title>Aventura a Dois</title>
+  </head>
+  <body>
+    <main>
+      <section class="secao intro">
+        <img src="./img/nos/nois.jpeg" alt="Nossa primeira Foto juntos" />
+        <div class="mensagem">
+          <h1>Eu & Você</h1>
+          <p>
+            Meu amor, no Dia da Mulher, quero te lembrar o quanto você é
+            incrível. Sua força, beleza, inteligência e carinho me inspiram
+            todos os dias. Tenho a sorte de caminhar ao seu lado. Te amo muito,
+            hoje e sempre.
+          </p>
+        </div>
+
+        <div class="aviso-scroll">
+          <p>Desça para ver o que preparei.</p>
+          <span class="scroll-indicator">⇩</span>
+        </div>
+      </section>
+
+      <section class="secao dados">
+        <h1>🌠 Onde tudo começou</h1>
+        <div class="informacoes">
+          <div class="carrossel">
+            <img
+              src="./img/conversas/cnv-1.jpeg"
+              alt="página 1"
+              class="ativo"
+            />
+            <img src="./img/conversas/cnv-2.jpeg" alt="página 2" />
+            <img src="./img/conversas/cnv-3.jpeg" alt="página 3" />
+            <img src="./img/conversas/cnv-4.jpeg" alt="página 4" />
+            <img src="./img/conversas/cnv-5.jpeg" alt="página 5" />
+            <img src="./img/conversas/cnv-6.jpeg" alt="página 6" />
+            <img src="./img/conversas/cnv-7.jpeg" alt="página 7" />
+            <img src="./img/conversas/cnv-8.jpeg" alt="página 8" />
+          </div>
+
+          <span id="data"><span>Data</span>: 02 de janeiro de 2025</span>
+          <span id="local"
+            ><span>Local</span>: Pastelaria e Cafeteria Pingado de Amor</span
+          >
+          <span id="conversa"><span>1º Conversa</span>:</span>
+          <img id="arrow" src="./img/nos/arrow.png" alt="seta" />
+          <span id="msg"
+            >💌 Se eu pudesse te dar algo mágico, daria a capacidade de se ver
+            pelos meus olhos. Assim, você entenderia o quanto é especial para
+            mim.</span
+          >
+          <img
+            id="localimg"
+            src="./img/conversas/pingado-de-amor.jpg"
+            alt="Foto do local"
+          />
+        </div>
+      </section>
+
+      <section class="secao fotos">
+        <h1>Nossas Fotos 🌸</h1>
+
+        <div class="carrossel">
+          <img src="./img/nos/nois.jpeg" alt="foto-1" class="ativo" />
+          <img src="./img/nos/blank.png" alt="mais em breve" class="proxima" />
+          <img src="./img/nos/blank.png" alt="mais em breve" />
+        </div>
+      </section>
+
+      <section class="secao contador">
+        <h1></h1>
+        <h1 onclick="auu()">J❤️Y</h1>
+      </section>
+    </main>
+
+    <script src="./js/tocarAuu.js"></script>
+    <script src="./js/carrossel.js"></script>
+    <script src="./js/contador.js"></script>
+  </body>
+</html>

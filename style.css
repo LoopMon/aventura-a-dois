@@ -1,0 +1,239 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+}
+
+.secao {
+  width: 100%;
+  height: 100vh;
+  background-color: #292929;
+}
+
+.intro {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: opacity(0.3);
+  }
+
+  & .mensagem {
+    position: absolute;
+    width: 70%;
+
+    & h1 {
+      font-size: 5rem;
+      color: #fff;
+    }
+
+    & p {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+  }
+
+  & .aviso-scroll {
+    position: absolute;
+    bottom: 30px;
+    color: #fff;
+    text-align: center;
+
+    & p {
+      font-size: 1.2rem;
+    }
+    & .scroll-indicator {
+      display: block;
+      margin-top: 20px;
+      font-size: 2rem;
+      animation: bounce 1s infinite;
+    }
+  }
+}
+
+.dados {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 30px;
+
+  & h1 {
+    margin: 10px 0px;
+    font-size: 3rem;
+    color: #fff;
+  }
+
+  & .informacoes {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "carrossel data data"
+      "carrossel local local"
+      "carrossel conversa conversa"
+      "carrossel arrow localimg"
+      "carrossel msg localimg";
+  }
+
+  & .carrossel {
+    grid-area: carrossel;
+    height: 500px;
+    justify-self: center;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  & .carrossel img {
+    height: 100%;
+    object-fit: contain;
+    display: none;
+  }
+
+  & .carrossel img.ativo {
+    display: block;
+  }
+
+  & span {
+    color: #fff;
+    font-size: 1.5rem;
+
+    & span {
+      font-weight: bold;
+      color: #e2848b;
+    }
+  }
+
+  & #data {
+    grid-area: data;
+  }
+  & #local {
+    grid-area: local;
+  }
+  & #conversa {
+    grid-area: conversa;
+  }
+  & #arrow {
+    grid-area: arrow;
+    width: 50%;
+  }
+  & #localimg {
+    grid-area: localimg;
+    width: 100%;
+    border-radius: 10px;
+  }
+  & #msg {
+    grid-area: msg;
+  }
+}
+
+.fotos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+
+  background-image: url(./img/nos/lage.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+
+  & h1 {
+    margin: 10px 0;
+    color: #e63946;
+    font-size: 3rem;
+    filter: drop-shadow(1px 1px 1px #fff);
+  }
+
+  & .carrossel {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    position: relative;
+  }
+
+  & .carrossel img {
+    position: absolute;
+    height: 90%;
+    border-radius: 10px;
+    display: none;
+    transition: all 1s;
+  }
+
+  & .carrossel img.ativo {
+    display: block;
+    top: 0;
+    left: -5%;
+    z-index: 2;
+  }
+
+  & .carrossel img.proxima {
+    display: block;
+    left: 50%;
+    opacity: 0.3;
+    scale: 0.8;
+  }
+}
+
+.contador {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #292929;
+
+  & h1 {
+    color: #fff;
+    filter: drop-shadow(0px 0px 5px #ba2c36) drop-shadow(0px 0px 10px #e63946)
+      drop-shadow(0px 0px 15px #e2848b);
+  }
+
+  & h1:nth-child(1) {
+    font-size: 4rem;
+    text-align: center;
+    & span {
+      color: #ffb6c1;
+    }
+  }
+
+  & h1:nth-child(2) {
+    font-size: 5rem;
+    animation: animacao 3s infinite alternate;
+    cursor: pointer;
+  }
+}
+
+@keyframes animacao {
+  0% {
+    transform: rotateZ(-5deg);
+  }
+  100% {
+    transform: rotateZ(5deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}

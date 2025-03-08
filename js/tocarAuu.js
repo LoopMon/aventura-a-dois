@@ -1,0 +1,3 @@
+function auu() {
+  alert("auuu")
+}

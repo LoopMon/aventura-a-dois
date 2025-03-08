@@ -1,0 +1,78 @@
+@media (max-width: 800px) {
+  .intro {
+    & .mensagem h1 {
+      font-size: 3rem;
+    }
+    & .mensagem p {
+      font-size: 1rem;
+    }
+    & .aviso-scroll p {
+      font-size: 1rem;
+    }
+  }
+
+  .dados {
+    height: auto;
+    padding: 10px;
+
+    & h1 {
+      font-size: 2rem;
+    }
+    & .informacoes {
+      height: auto;
+      gap: 5px;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, auto);
+      grid-template-areas:
+        "data"
+        "conversa"
+        "carrossel"
+        "local"
+        "localimg"
+        "msg";
+    }
+    & span {
+      font-size: 1rem;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    & #arrow {
+      display: none;
+    }
+
+    & #localimg {
+      width: 70%;
+      margin: auto;
+    }
+
+    & #msg {
+      text-align: center;
+    }
+  }
+
+  .fotos {
+    height: auto;
+    background-size: cover;
+
+    & h1 {
+      font-size: 2rem;
+    }
+    & .carrossel {
+      width: 70%;
+
+      & img {
+        height: 50%;
+        top: 50% !important;
+        transform: translateY(-50%);
+      }
+      & img.ativo {
+        left: -10%;
+      }
+    }
+  }
+
+  .contador h1 {
+    font-size: 2rem !important;
+  }
+}

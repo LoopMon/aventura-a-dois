@@ -219,6 +219,28 @@ body {
   }
 }
 
+.frases {
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 30px;
+
+  & h1 {
+    margin: 10px 0px;
+    font-size: 3rem;
+    color: #fff;
+  }
+
+  & p {
+    width: 80%;
+    max-width: 700px;
+    margin-top: 10px;
+    color: #fff;
+    text-align: justify;
+  }
+}
+
 @keyframes animacao {
   0% {
     transform: rotateZ(-5deg);

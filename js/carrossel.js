@@ -21,4 +21,4 @@ function trocarImagemDeFotos() {
 }
 
 setInterval(trocarImagemDeInfo, 15000)
-setInterval(trocarImagemDeFotos, 2000)
+setInterval(trocarImagemDeFotos, 4000)

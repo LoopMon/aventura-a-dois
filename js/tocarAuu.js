@@ -1,5 +1,4 @@
-let audioAu = new Audio()
-audioAu.src = "../audios/auu.mp3"
+const elemento = document.querySelector("audio")
 function auu() {
-  audioAu.play()
+  elemento.play()
 }
